@@ -4,9 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 /**
  * Simple brute force implementation
@@ -42,7 +40,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 				reader.close();
 				FileWriter writer = new FileWriter ("result.out");
 				ArrayList<String> seenSymptomsList = new ArrayList<String>();
-				HashMap<String, Integer> symptoms = new HashMap<>();
+				TreeMap<String, Integer> symptoms = new TreeMap<>();
 
 				for (int i = 0; i < result.size(); i++){
 
